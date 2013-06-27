@@ -31,4 +31,4 @@ With Python 2.7, you can automatically discover the tests:
 
 ## Requirements 
 
-See the `requirements'txt` file
+See the `requirements.txt` file
