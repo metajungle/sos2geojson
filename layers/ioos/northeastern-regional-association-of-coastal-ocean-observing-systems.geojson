@@ -1,0 +1,666 @@
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.709346, 
+                    43.072001
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "CML", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Surface Partial Pressure Of Carbon Dioxide In Sea Water", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Level Pressure", 
+                    "Dissolved Oxygen", 
+                    "Chlorophyll", 
+                    "Air Temperature", 
+                    "Ed Par"
+                ], 
+                "Description": "Mooring CML data from the COOA (UNH-COOA) located UNH Coastal Marine Lab Field Station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -73.73, 
+                    40.88
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "44022", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Level Pressure", 
+                    "Dissolved Oxygen", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring 44022 data from the LISICOS (LISICOS) located Execution Rocks Long Island Sound"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -68.996696472168, 
+                    44.0559844970703
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "F01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring F01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Penobscot Bay"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -68.8308, 
+                    44.3878
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "F02", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring F02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located DeepCwind Castine Test Site"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -54.1317, 
+                    47.3255
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "SMB-MO-04", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring SMB-MO-04 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Pilot Boarding Station, Red Island Shoal, Placentia Bay, NL, CA"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -72.077, 
+                    41.305
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "LDLC3", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Sea Level Pressure", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring LDLC3 data from the LISICOS (LISICOS) located New London Ledge Light"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -71.1217, 
+                    40.981
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "CDIP154", 
+                "Observed properties": [
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Dominant Wave Period"
+                ], 
+                "Description": "Mooring CDIP154 data from the COOA (UNH-COOA-CDIP) located Block Island, RI"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -63.4082, 
+                    44.5001
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "CDIP176", 
+                "Observed properties": [
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Dominant Wave Period"
+                ], 
+                "Description": "Mooring CDIP176 data from the COOA (UNH-COOA-CDIP) located Halifax Harbor, CA"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -67.8798, 
+                    43.4907
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "M01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring M01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Jordan Basin"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -65.9069544474284, 
+                    42.3313840230306
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "N01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring N01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Northeast Channel"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -72.655, 
+                    41.138
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "44039", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring 44039 data from the LISICOS (LISICOS) located Central Long Island Sound"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -54.688, 
+                    46.9813
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "SMB-MO-01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring SMB-MO-01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Mouth of Placentia Bay, NL, Canada"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -54.0488, 
+                    47.7893
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "SMB-MO-05", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring SMB-MO-05 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Come By Chance Point, Placentia Bay, NL, CA"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -69.9877, 
+                    43.7628
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "D02", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Turbidity", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Percent Oxygen Saturation", 
+                    "Oxygen Saturation", 
+                    "Dominant Wave Period", 
+                    "Dissolved Oxygen", 
+                    "Direction Of Sea Water Velocity", 
+                    "Chlorophyll", 
+                    "Air Temperature", 
+                    "Ed Par"
+                ], 
+                "Description": "Mooring D02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Lower Harpswell Sound"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -69.319580078125, 
+                    43.7063484191895
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "E02", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring E02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located DeepCwind Test Site"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -69.3578, 
+                    43.7148
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "E01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring E01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Central Maine Shelf"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.4278, 
+                    43.1807
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "B01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring B01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Western Maine Shelf"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.169, 
+                    42.801
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "44098", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring 44098 data from the COOA (UNH-COOA) located Jeffrey's Ledge"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.542, 
+                    43.024
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "CO2", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Turbidity", 
+                    "Surface Partial Pressure Of Carbon Dioxide In Sea Water", 
+                    "Surface Partial Pressure Of Carbon Dioxide In Air", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Level Pressure", 
+                    "Dissolved Oxygen", 
+                    "Chlorophyll", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring CO2 data from the COOA (UNH-COOA) located Appledore Island"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.5645150078668, 
+                    42.5223609076606
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "A01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Turbidity", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Percent Oxygen Saturation", 
+                    "Oxygen Saturation", 
+                    "Dominant Wave Period", 
+                    "Dissolved Oxygen", 
+                    "Direction Of Sea Water Velocity", 
+                    "Chlorophyll", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring A01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Massachusetts Bay"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -71.5733306884766, 
+                    41.0993072509766
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "MDS02", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring MDS02 data from the URI (Univ. of Rhode Is.) located SAMP MD S"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.8678, 
+                    43.0715
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "GREAT_BAY", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Turbidity", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Level Pressure", 
+                    "Dissolved Oxygen", 
+                    "Air Temperature", 
+                    "Ed Par"
+                ], 
+                "Description": "Mooring GREAT_BAY data from the COOA (UNH-COOA) located Great Bay, NH"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -73.58, 
+                    40.956
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "44040", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Salinity", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Dissolved Oxygen", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring 44040 data from the LISICOS (LISICOS) located Western Long Island Sound"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -68.109302520752, 
+                    44.1061248779297
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "I01", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Visibility In Air", 
+                    "Significant Height Of Wind And Swell Waves", 
+                    "Sea Water Temperature", 
+                    "Sea Water Speed", 
+                    "Sea Water Salinity", 
+                    "Sea Water Electrical Conductivity", 
+                    "Sea Water Density", 
+                    "Sea Level Pressure", 
+                    "Dominant Wave Period", 
+                    "Direction Of Sea Water Velocity", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring I01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Eastern Maine Shelf"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -72.067, 
+                    41.263
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "44060", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Sea Water Temperature", 
+                    "Sea Level Pressure", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring 44060 data from the LISICOS (LISICOS) located Eastern Long Island Sound"
+            }
+        }
+    ]
+}

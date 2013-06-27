@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sos:Capabilities xmlns:oost="http://www.oostethys.org/schemas/0.1.0/oostethys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:sos="http://www.opengis.net/sos/1.0" xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd" version="1.0.0">
+    <ows:ServiceIdentification>
+        <ows:Title>Northeastern Regional Association of Coastal Ocean Observing Systems</ows:Title>
+        <ows:Abstract/>
+        <ows:Keywords><ows:Keyword>SOS</ows:Keyword><ows:Keyword>NERACOOS</ows:Keyword><ows:Keyword>OCEANOGRAPHY</ows:Keyword><ows:Keyword>Ocean Observations</ows:Keyword><ows:Keyword>Gulf of Maine</ows:Keyword><ows:Keyword>Long Island Sound</ows:Keyword><ows:Keyword>Narragansett Bay</ows:Keyword><ows:Keyword>Cape Cod</ows:Keyword><ows:Keyword>Boston Harbor</ows:Keyword><ows:Keyword>Buzzards Bay</ows:Keyword><ows:Keyword>Weather</ows:Keyword><ows:Keyword>Ocean Currents</ows:Keyword><ows:Keyword>Water Temperature</ows:Keyword><ows:Keyword>Salinity</ows:Keyword><ows:Keyword>Winds</ows:Keyword><ows:Keyword>Waves</ows:Keyword><ows:Keyword>Ocean Color</ows:Keyword><ows:Keyword>GoMOOS</ows:Keyword><ows:Keyword>LISICOS</ows:Keyword><ows:Keyword>Univ. of New Hampshire</ows:Keyword><ows:Keyword>MVCO</ows:Keyword></ows:Keywords>
+        <ows:ServiceType codeSpace="http://opengeospatial.net">OGC:SOS</ows:ServiceType>
+        <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+        <ows:Fees>NONE</ows:Fees>
+        <ows:AccessConstraints>NONE</ows:AccessConstraints>
+    </ows:ServiceIdentification>
+    <ows:ServiceProvider>
+        <ows:ProviderName>NERACOOS</ows:ProviderName>
+        <ows:ProviderSite xlink:href="http://www.neracoos.org/"/>
+        <ows:ServiceContact>
+            <ows:IndividualName>Eric Bridger</ows:IndividualName>
+            <ows:PositionName/>
+            <ows:ContactInfo>
+                <ows:Phone>
+                    <ows:Voice/>
+                </ows:Phone>
+                <ows:Address>
+                    <ows:DeliveryPoint/>
+                    <ows:City/>
+                    <ows:AdministrativeArea/>
+                    <ows:PostalCode/>
+                    <ows:Country/>
+                    <ows:ElectronicMailAddress>eric@gmri.org</ows:ElectronicMailAddress>
+                </ows:Address>
+            </ows:ContactInfo>
+        </ows:ServiceContact>
+    </ows:ServiceProvider>
+    <ows:OperationsMetadata>
+        <ows:Operation name="GetCapabilities">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                    <ows:Post xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="Sections">
+                <ows:AllowedValues>
+                     <ows:Value>All</ows:Value>
+                     <ows:Value>Filter_Capabilities</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="service">
+                <ows:AllowedValues>
+                    <ows:Value>SOS</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="version">
+                <ows:AllowedValues>
+                    <ows:Value>1.0.0</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="AcceptVersions">
+                <ows:AllowedValues>
+                   <ows:Value>1.0.0</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="GetObservation">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                    <ows:Post xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="offering"><ows:AllowedValues><ows:Value>44022</ows:Value><ows:Value>44039</ows:Value><ows:Value>44040</ows:Value><ows:Value>44060</ows:Value><ows:Value>44098</ows:Value><ows:Value>A01</ows:Value><ows:Value>ALL_PLATFORMS</ows:Value><ows:Value>B01</ows:Value><ows:Value>CDIP154</ows:Value><ows:Value>CDIP176</ows:Value><ows:Value>CML</ows:Value><ows:Value>CO2</ows:Value><ows:Value>D02</ows:Value><ows:Value>E01</ows:Value><ows:Value>E02</ows:Value><ows:Value>F01</ows:Value><ows:Value>F02</ows:Value><ows:Value>GREAT_BAY</ows:Value><ows:Value>I01</ows:Value><ows:Value>LDLC3</ows:Value><ows:Value>M01</ows:Value><ows:Value>MDS02</ows:Value><ows:Value>N01</ows:Value><ows:Value>SMB-MO-01</ows:Value><ows:Value>SMB-MO-04</ows:Value><ows:Value>SMB-MO-05</ows:Value></ows:AllowedValues></ows:Parameter>
+            <ows:Parameter name="observedProperty"><ows:AllowedValues><ows:Value>Ed_PAR</ows:Value><ows:Value>air_temperature</ows:Value><ows:Value>chlorophyll</ows:Value><ows:Value>direction_of_sea_water_velocity</ows:Value><ows:Value>dissolved_oxygen</ows:Value><ows:Value>dominant_wave_period</ows:Value><ows:Value>oxygen_saturation</ows:Value><ows:Value>percent_oxygen_saturation</ows:Value><ows:Value>sea_level_pressure</ows:Value><ows:Value>sea_water_density</ows:Value><ows:Value>sea_water_electrical_conductivity</ows:Value><ows:Value>sea_water_salinity</ows:Value><ows:Value>sea_water_speed</ows:Value><ows:Value>sea_water_temperature</ows:Value><ows:Value>significant_height_of_wind_and_swell_waves</ows:Value><ows:Value>surface_partial_pressure_of_carbon_dioxide_in_air</ows:Value><ows:Value>surface_partial_pressure_of_carbon_dioxide_in_sea_water</ows:Value><ows:Value>turbidity</ows:Value><ows:Value>visibility_in_air</ows:Value><ows:Value>wind_from_direction</ows:Value><ows:Value>wind_gust</ows:Value><ows:Value>wind_speed</ows:Value></ows:AllowedValues></ows:Parameter>
+            <ows:Parameter name="eventTime">
+                <ows:AllowedValues>
+                   <ows:Range>
+                      <ows:MinimumValue>2000-07-10T20:00:00Z</ows:MinimumValue>
+                      <ows:MaximumValue>now</ows:MaximumValue>
+                   </ows:Range>
+                </ows:AllowedValues>
+            </ows:Parameter>
+            <ows:Parameter name="responseFormat">
+                <ows:AllowedValues>
+                   <ows:Value>text/xml; subtype="om/1.0.0"</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+			<ows:Parameter name="resultModel">
+				<ows:AllowedValues>
+					<ows:Value>om:Observation</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="DescribeSensor">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                    <ows:Post xlink:href="http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi"/>
+                </ows:HTTP>
+            </ows:DCP>
+            <ows:Parameter name="procedure"><ows:AllowedValues><ows:Value>urn:ogc:neracoos.org:def:source:mooring:44022</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:44039</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:44040</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:44060</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:44098</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:A01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:ALL_PLATFORMS</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:B01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:CDIP154</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:CDIP176</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:CML</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:CO2</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:D02</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:E01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:E02</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:F01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:F02</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:GREAT_BAY</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:I01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:LDLC3</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:M01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:MDS02</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:N01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:SMB-MO-01</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:SMB-MO-04</ows:Value><ows:Value>urn:ogc:neracoos.org:def:source:mooring:SMB-MO-05</ows:Value></ows:AllowedValues></ows:Parameter>
+            <ows:Parameter name="outputFormat">
+                <ows:AllowedValues>
+                    <ows:Value>text/xml; subtype="sensorML/1.0.1"</ows:Value>
+                </ows:AllowedValues>
+            </ows:Parameter>
+        </ows:Operation>
+    </ows:OperationsMetadata>
+    <sos:Filter_Capabilities xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:om="http://www.opengis.net/om/1.0" xmlns:swe="http://www.opengis.net/swe/1.0.1">
+      <ogc:Spatial_Capabilities>
+        <ogc:GeometryOperands>
+          <ogc:GeometryOperand>gml:Envelope</ogc:GeometryOperand>
+        </ogc:GeometryOperands>
+        <ogc:SpatialOperators>
+          <ogc:SpatialOperator name="BBOX"/>
+        </ogc:SpatialOperators>
+      </ogc:Spatial_Capabilities>
+      <ogc:Temporal_Capabilities>
+        <ogc:TemporalOperands>
+          <ogc:TemporalOperand>gml:TimeInstant</ogc:TemporalOperand>
+          <ogc:TemporalOperand>gml:TimePeriod</ogc:TemporalOperand>
+        </ogc:TemporalOperands>
+        <ogc:TemporalOperators>
+          <ogc:TemporalOperator name="TM_During"/>
+          <ogc:TemporalOperator name="TM_Equals"/>
+        </ogc:TemporalOperators>
+      </ogc:Temporal_Capabilities>
+      <ogc:Scalar_Capabilities>
+        <ogc:ComparisonOperators>
+           <ogc:ComparisonOperator>Between</ogc:ComparisonOperator>
+        </ogc:ComparisonOperators>
+      </ogc:Scalar_Capabilities>
+      <ogc:Id_Capabilities>
+         <ogc:EID/>
+         <ogc:FID/>
+      </ogc:Id_Capabilities>
+    </sos:Filter_Capabilities>
+    <sos:Contents>
+        <sos:ObservationOfferingList>
+            
+        <sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="44022">
+                <gml:description>Mooring 44022 data from the LISICOS (LISICOS) located Execution Rocks Long Island Sound</gml:description>
+                <gml:name>44022</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>40.88 -73.73</gml:lowerCorner>
+                        <gml:upperCorner>40.88 -73.73</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="44022_valid_times">
+                        <gml:beginPosition>2009-07-22T18:42:04.14249Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:44022"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_44022"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="44039">
+                <gml:description>Mooring 44039 data from the LISICOS (LISICOS) located Central Long Island Sound</gml:description>
+                <gml:name>44039</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>41.138 -72.655</gml:lowerCorner>
+                        <gml:upperCorner>41.138 -72.655</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="44039_valid_times">
+                        <gml:beginPosition>2009-07-22T18:42:10.401074Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:44039"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_44039"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="44040">
+                <gml:description>Mooring 44040 data from the LISICOS (LISICOS) located Western Long Island Sound</gml:description>
+                <gml:name>44040</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>40.956 -73.58</gml:lowerCorner>
+                        <gml:upperCorner>40.956 -73.58</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="44040_valid_times">
+                        <gml:beginPosition>2009-07-22T18:42:16.650525Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:44040"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_44040"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="44060">
+                <gml:description>Mooring 44060 data from the LISICOS (LISICOS) located Eastern Long Island Sound</gml:description>
+                <gml:name>44060</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>41.263 -72.067</gml:lowerCorner>
+                        <gml:upperCorner>41.263 -72.067</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="44060_valid_times">
+                        <gml:beginPosition>2009-07-22T18:42:23.100212Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:44060"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_44060"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="44098">
+                <gml:description>Mooring 44098 data from the COOA (UNH-COOA) located Jeffrey's Ledge</gml:description>
+                <gml:name>44098</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>42.801 -70.169</gml:lowerCorner>
+                        <gml:upperCorner>42.801 -70.169</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="44098_valid_times">
+                        <gml:beginPosition>2008-10-01T13:18:16.755045Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:44098"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_44098"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="A01">
+                <gml:description>Mooring A01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Massachusetts Bay</gml:description>
+                <gml:name>A01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>42.5223609076606 -70.5645150078668</gml:lowerCorner>
+                        <gml:upperCorner>42.5223609076606 -70.5645150078668</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="A01_valid_times">
+                        <gml:beginPosition>2001-07-10T03:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:A01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:turbidity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:percent_oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:chlorophyll"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_A01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="ALL_PLATFORMS">
+                <gml:description>Mooring data for all buoys from the Northeastern Regional Association of Coastal Ocean Observing Systems (NERACOOS) located in the NERACOOS Region</gml:description>
+                <gml:name>ALL_PLATFORMS</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>42.75 -67.25</gml:lowerCorner>
+                        <gml:upperCorner>46.0 -63.0</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="ALL_PLATFORMS_valid_times">
+                        <gml:beginPosition>2000-07-10T20:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:ALL_PLATFORMS"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:turbidity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:surface_partial_pressure_of_carbon_dioxide_in_sea_water"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:surface_partial_pressure_of_carbon_dioxide_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:percent_oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:chlorophyll"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:Ed_PAR"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_ALL_PLATFORMS"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="B01">
+                <gml:description>Mooring B01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Western Maine Shelf</gml:description>
+                <gml:name>B01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.1807 -70.4278</gml:lowerCorner>
+                        <gml:upperCorner>43.1807 -70.4278</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="B01_valid_times">
+                        <gml:beginPosition>2001-07-09T12:52:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:B01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_B01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="CDIP154">
+                <gml:description>Mooring CDIP154 data from the COOA (UNH-COOA-CDIP) located Block Island, RI</gml:description>
+                <gml:name>CDIP154</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>40.981 -71.1217</gml:lowerCorner>
+                        <gml:upperCorner>40.981 -71.1217</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="CDIP154_valid_times">
+                        <gml:beginPosition>2009-09-18T19:36:55.173933Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:CDIP154"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_CDIP154"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="CDIP176">
+                <gml:description>Mooring CDIP176 data from the COOA (UNH-COOA-CDIP) located Halifax Harbor, CA</gml:description>
+                <gml:name>CDIP176</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>44.5001 -63.4082</gml:lowerCorner>
+                        <gml:upperCorner>44.5001 -63.4082</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="CDIP176_valid_times">
+                        <gml:beginPosition>2011-09-22T14:57:37.318088Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:CDIP176"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_CDIP176"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="CML">
+                <gml:description>Mooring CML data from the COOA (UNH-COOA) located UNH Coastal Marine Lab Field Station</gml:description>
+                <gml:name>CML</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.072001 -70.709346</gml:lowerCorner>
+                        <gml:upperCorner>43.072001 -70.709346</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="CML_valid_times">
+                        <gml:beginPosition>2010-08-20T13:34:35.032598Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:CML"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:surface_partial_pressure_of_carbon_dioxide_in_sea_water"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:chlorophyll"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:Ed_PAR"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_CML"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="CO2">
+                <gml:description>Mooring CO2 data from the COOA (UNH-COOA) located Appledore Island</gml:description>
+                <gml:name>CO2</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.024 -70.542</gml:lowerCorner>
+                        <gml:upperCorner>43.024 -70.542</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="CO2_valid_times">
+                        <gml:beginPosition>2009-09-17T13:02:39.744953Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:CO2"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:turbidity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:surface_partial_pressure_of_carbon_dioxide_in_sea_water"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:surface_partial_pressure_of_carbon_dioxide_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:chlorophyll"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_CO2"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="D02">
+                <gml:description>Mooring D02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Lower Harpswell Sound</gml:description>
+                <gml:name>D02</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.7628 -69.9877</gml:lowerCorner>
+                        <gml:upperCorner>43.7628 -69.9877</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="D02_valid_times">
+                        <gml:beginPosition>2006-12-14T21:30:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:D02"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:turbidity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:percent_oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:oxygen_saturation"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:chlorophyll"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:Ed_PAR"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_D02"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="E01">
+                <gml:description>Mooring E01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Central Maine Shelf</gml:description>
+                <gml:name>E01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.7148 -69.3578</gml:lowerCorner>
+                        <gml:upperCorner>43.7148 -69.3578</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="E01_valid_times">
+                        <gml:beginPosition>2001-07-09T12:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:E01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_E01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="E02">
+                <gml:description>Mooring E02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located DeepCwind Test Site</gml:description>
+                <gml:name>E02</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.7063484191895 -69.319580078125</gml:lowerCorner>
+                        <gml:upperCorner>43.7063484191895 -69.319580078125</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="E02_valid_times">
+                        <gml:beginPosition>2010-08-11T14:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:E02"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_E02"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="F01">
+                <gml:description>Mooring F01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Penobscot Bay</gml:description>
+                <gml:name>F01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>44.0559844970703 -68.996696472168</gml:lowerCorner>
+                        <gml:upperCorner>44.0559844970703 -68.996696472168</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="F01_valid_times">
+                        <gml:beginPosition>2000-07-10T20:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:F01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_F01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="F02">
+                <gml:description>Mooring F02 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located DeepCwind Castine Test Site</gml:description>
+                <gml:name>F02</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>44.3878 -68.8308</gml:lowerCorner>
+                        <gml:upperCorner>44.3878 -68.8308</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="F02_valid_times">
+                        <gml:beginPosition>2012-02-22T17:20:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:F02"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_F02"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="GREAT_BAY">
+                <gml:description>Mooring GREAT_BAY data from the COOA (UNH-COOA) located Great Bay, NH</gml:description>
+                <gml:name>GREAT_BAY</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.0715 -70.8678</gml:lowerCorner>
+                        <gml:upperCorner>43.0715 -70.8678</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="GREAT_BAY_valid_times">
+                        <gml:beginPosition>2009-08-19T18:41:26.435278Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:GREAT_BAY"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:turbidity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dissolved_oxygen"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:Ed_PAR"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_GREAT_BAY"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="I01">
+                <gml:description>Mooring I01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Eastern Maine Shelf</gml:description>
+                <gml:name>I01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>44.1061248779297 -68.109302520752</gml:lowerCorner>
+                        <gml:upperCorner>44.1061248779297 -68.109302520752</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="I01_valid_times">
+                        <gml:beginPosition>2001-07-27T07:34:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:I01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_I01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="LDLC3">
+                <gml:description>Mooring LDLC3 data from the LISICOS (LISICOS) located New London Ledge Light</gml:description>
+                <gml:name>LDLC3</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>41.305 -72.077</gml:lowerCorner>
+                        <gml:upperCorner>41.305 -72.077</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="LDLC3_valid_times">
+                        <gml:beginPosition>2009-07-22T18:42:27.425292Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:LDLC3"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_LDLC3"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="M01">
+                <gml:description>Mooring M01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Jordan Basin</gml:description>
+                <gml:name>M01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>43.4907 -67.8798</gml:lowerCorner>
+                        <gml:upperCorner>43.4907 -67.8798</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="M01_valid_times">
+                        <gml:beginPosition>2001-07-15T16:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:M01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_M01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="MDS02">
+                <gml:description>Mooring MDS02 data from the URI (Univ. of Rhode Is.) located SAMP MD S</gml:description>
+                <gml:name>MDS02</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>41.0993072509766 -71.5733306884766</gml:lowerCorner>
+                        <gml:upperCorner>41.0993072509766 -71.5733306884766</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="MDS02_valid_times">
+                        <gml:beginPosition>2009-11-05T17:10:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:MDS02"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_MDS02"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="N01">
+                <gml:description>Mooring N01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (Univ. of Maine) located Northeast Channel</gml:description>
+                <gml:name>N01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>42.3313840230306 -65.9069544474284</gml:lowerCorner>
+                        <gml:upperCorner>42.3313840230306 -65.9069544474284</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="N01_valid_times">
+                        <gml:beginPosition>2004-06-03T21:00:00Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:N01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_from_direction"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:visibility_in_air"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_salinity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_electrical_conductivity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_density"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:dominant_wave_period"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:direction_of_sea_water_velocity"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_N01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="SMB-MO-01">
+                <gml:description>Mooring SMB-MO-01 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Mouth of Placentia Bay, NL, Canada</gml:description>
+                <gml:name>SMB-MO-01</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>46.9813 -54.688</gml:lowerCorner>
+                        <gml:upperCorner>46.9813 -54.688</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="SMB-MO-01_valid_times">
+                        <gml:beginPosition>2011-05-03T21:35:41.995807Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:SMB-MO-01"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_SMB-MO-01"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="SMB-MO-04">
+                <gml:description>Mooring SMB-MO-04 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Pilot Boarding Station, Red Island Shoal, Placentia Bay, NL, CA</gml:description>
+                <gml:name>SMB-MO-04</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>47.3255 -54.1317</gml:lowerCorner>
+                        <gml:upperCorner>47.3255 -54.1317</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="SMB-MO-04_valid_times">
+                        <gml:beginPosition>2011-05-06T14:26:22.716247Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:SMB-MO-04"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_SMB-MO-04"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering><sos:ObservationOffering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="SMB-MO-05">
+                <gml:description>Mooring SMB-MO-05 data from the Northeastern Regional Association of Coastal Ocean Observing Systems (SmartBay) located Come By Chance Point, Placentia Bay, NL, CA</gml:description>
+                <gml:name>SMB-MO-05</gml:name>
+                <gml:boundedBy>
+                    <gml:Envelope srsName="urn:ogc:def:crs:EPSG:6.5:4326">
+                        <gml:lowerCorner>47.7893 -54.0488</gml:lowerCorner>
+                        <gml:upperCorner>47.7893 -54.0488</gml:upperCorner>
+                    </gml:Envelope>
+                </gml:boundedBy>
+                <sos:time>
+                    <gml:TimePeriod xsi:type="gml:TimePeriodType" gml:id="SMB-MO-05_valid_times">
+                        <gml:beginPosition>2011-05-06T14:26:26.973521Z</gml:beginPosition>
+                        <gml:endPosition indeterminatePosition="now"/>
+                        <gml:timeInterval unit="hour">.5</gml:timeInterval>
+                    </gml:TimePeriod>
+                </sos:time>
+                <sos:procedure xlink:href="urn:ogc:neracoos.org:def:source:mooring:SMB-MO-05"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_speed"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:wind_gust"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:significant_height_of_wind_and_swell_waves"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_water_temperature"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:sea_level_pressure"/><sos:observedProperty xlink:href="urn:ogc:def:phenomenon:mmisw.org:cf:air_temperature"/>
+                
+                
+        		<sos:featureOfInterest xlink:href="urn:ogc:def:object:feature:FOI_SMB-MO-05"/>
+                <sos:responseFormat>text/xml; subtype="om/1.0.0"</sos:responseFormat>
+                <sos:responseMode>inline</sos:responseMode>
+            </sos:ObservationOffering></sos:ObservationOfferingList>
+    </sos:Contents>
+</sos:Capabilities>

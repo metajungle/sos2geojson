@@ -1,0 +1,1904 @@
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -77.935, 
+                    33.955
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.zbqn7.met", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Salinity"
+                ], 
+                "Description": "Mooring enp.zbqn7.met data from the enp (enp) located Zeke's Basin, North Carolina"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.975306, 
+                    29.148
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.portorange.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.portorange. data from the fldep (fldep) located Port Orange station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.549889, 
+                    29.800167
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.racypoint.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.racypoint. data from the fldep (fldep) located Racy Point station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.74, 
+                    27.54
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.ANM.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.ANM.NGWLMS data from the usf (usf) located Anna Maria"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.97119, 
+                    26.44303
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.gulfofmexico.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.gulfofmexico.wq data from the sccf (sccf) located Gulf of Mexico station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.790056, 
+                    26.141778
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.naplesbay.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.naplesbay. data from the fldep (fldep) located Naples Bay station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.0960006713867, 
+                    25.0839996337891
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.NFB.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.NFB.NGWLMS data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.653, 
+                    25.223
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.trrf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.trrf1.met data from the enp (enp) located Taylor River, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.632, 
+                    25.174
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.lmdf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.lmdf1.met data from the enp (enp) located Little Madeira, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -83.08, 
+                    26.06
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C13.ADCP", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C13.ADCP data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.826, 
+                    24.979
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.lrkf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.lrkf1.met data from the enp (enp) located Little Rabbit Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.029, 
+                    25.376
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.gbif1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.gbif1.met data from the enp (enp) located Gunboat Island, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.71, 
+                    28.77
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.HOM.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.HOM.NGWLMS data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.79, 
+                    28.19
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.ANC.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.ANC.NGWLMS data from the usf (usf) located Anclote Gulf Park"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.48, 
+                    33.84
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "carocoops.SUN2.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Chl Concentration", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring carocoops.SUN2.buoy data from the carocoops (carocoops) located CAROCOOPS SUN2, Sunset Nearshore, NC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.667, 
+                    28.433001
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.APK.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.APK.NGWLMS data from the usf (usf) located Aripeka"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.76, 
+                    27.6
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.EGK.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.EGK.NGWLMS data from the usf (usf) located Egmont Key"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.15477, 
+                    26.50754
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.blindpass.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.blindpass.wq data from the sccf (sccf) located Blind Pass station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.632003, 
+                    33.827491
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "lbhmc.cherrygrove.pier", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Surface Chlorophyll", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Oxygen Concentration", 
+                    "Depth", 
+                    "Bottom Chlorophyll", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring lbhmc.cherrygrove.pier data from the lbhmc (lbhmc) located Cherry Grove Pier, N. Myrtle Beach, SC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.942, 
+                    25.104
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.mukf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.mukf1.met data from the enp (enp) located Murray Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.4, 
+                    32.27
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "carocoops.FRP2.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Chl Concentration", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring carocoops.FRP2.buoy data from the carocoops (carocoops) located CAROCOOPS FRP2, Fripp Nearshore, SC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.591972, 
+                    28.083675
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.melbourne.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.melbourne. data from the fldep (fldep) located Melbourne station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.063099, 
+                    26.467907
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.tarponbay.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.tarponbay.wq data from the sccf (sccf) located Tarpon Bay station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.438, 
+                    25.177
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.bwsf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.bwsf1.met data from the enp (enp) located Blackwater Sound, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.519, 
+                    25.087
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.bnkf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.bnkf1.met data from the enp (enp) located Butternut Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.681389, 
+                    29.594333
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.buffalobluff.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.buffalobluff. data from the fldep (fldep) located Buffalo Bluff station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -87.556, 
+                    30.279
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.ppta1.met", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring enp.ppta1.met data from the enp (enp) located Perdido Key, AL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -79.62, 
+                    32.8
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "carocoops.CAP2.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Swell Height", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Chl Concentration", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring carocoops.CAP2.buoy data from the carocoops (carocoops) located CAROCOOPS CAP2, Capers Island Nearshore, SC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.884143, 
+                    33.682675
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "lbhmc.2ndave.pier", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Surface Chlorophyll", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Oxygen Concentration", 
+                    "Depth", 
+                    "Bottom Chlorophyll", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring lbhmc.2ndave.pier data from the lbhmc (lbhmc) located 2nd Ave North Pier, Myrtle Beach, SC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.433, 
+                    25.212
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.lbsf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.lbsf1.met data from the enp (enp) located Little Blackwater, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -84.290001, 
+                    30.058001
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.SHP.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.SHP.NGWLMS data from the usf (usf) located Shell Point"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.007988, 
+                    26.522564
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.shellpoint.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.shellpoint.wq data from the sccf (sccf) located Shell Point station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.939, 
+                    25.23
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.wwef1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.wwef1.met data from the enp (enp) located White Water -West, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.779878, 
+                    33.76152
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "scdnr.apachepier.pier", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Oxygen Concentration", 
+                    "Depth", 
+                    "Air Temperature"
+                ], 
+                "Description": "Mooring scdnr.apachepier.pier data from the scdnr (scdnr) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -84.25, 
+                    27.389999
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C16.ADCP", 
+                "Observed properties": [
+                    "Swell Height", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current To Direction", 
+                    "Current Speed"
+                ], 
+                "Description": "Mooring usf.C16.ADCP data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.08815, 
+                    26.8357
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.moorehaven.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.moorehaven.wq data from the sccf (sccf) located Moore Haven station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -83.72, 
+                    27.5
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C12.weatherpak", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C12.weatherpak data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.943, 
+                    25.42
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.canf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.canf1.met data from the enp (enp) located Cane Patch, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.444722, 
+                    27.861667
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fit.sispnj.met", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Salinity", 
+                    "Depth", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fit.sispnj.met data from the fit (fit) located Sebastian Inlet met station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.204917, 
+                    29.615417
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.bingslanding.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.bingslanding. data from the fldep (fldep) located Bing&#39;s Landing station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.798139, 
+                    26.093139
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.gordonriverinlet.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.gordonriverinlet. data from the fldep (fldep) located Gordon River Inlet station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -77.71, 
+                    34.14
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "cormp.ILM2.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Significant Wave Height", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Dominant Wave Period", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring cormp.ILM2.buoy data from the cormp (cormp) located CORMP ILM2, Wrightsville Beach Nearshore, NC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.732002, 
+                    28.285
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.PAS.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.PAS.NGWLMS data from the usf (usf) located Port Richey"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.8, 
+                    28.15
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.FHP.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.FHP.NGWLMS data from the usf (usf) located Fred Howard Park"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.111, 
+                    25.484
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.lbrf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.lbrf1.met data from the enp (enp) located Broad River Lower, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.013, 
+                    25.295
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.cwaf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.cwaf1.met data from the enp (enp) located Clear Water Pass, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.88, 
+                    26.4
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.BCP.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.BCP.NGWLMS data from the usf (usf) located Big Carlos Pass"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.533, 
+                    25.209
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.tcvf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.tcvf1.met data from the enp (enp) located Trout Cove, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.768997, 
+                    27.677999
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C21.weatherpak", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C21.weatherpak data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.371222, 
+                    27.632056
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.verobeach.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.verobeach. data from the fldep (fldep) located Vero Beach station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -77.36, 
+                    33.99
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "cormp.ILM3.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring cormp.ILM3.buoy data from the cormp (cormp) located CORMP ILM3, Wrightsville Beach Offshore, NC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.916083, 
+                    29.063472
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.poncedeleonsouth.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.poncedeleonsouth. data from the fldep (fldep) located Ponce De Leon South station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.773, 
+                    24.693
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.plsf1.met", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring enp.plsf1.met data from the enp (enp) located Pulaski Shoal Light, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -83.078003, 
+                    26.058001
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C13.weatherpak", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C13.weatherpak data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.444, 
+                    25.254
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.hcef1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.hcef1.met data from the enp (enp) located Highway Creek, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.214996, 
+                    25.424999
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C17.weatherpak", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C17.weatherpak data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.17544, 
+                    26.56157
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.redfishpass.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.redfishpass.wq data from the sccf (sccf) located Redfish Pass station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.594, 
+                    27.661
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fwri.mtb.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Precipitation", 
+                    "Photosynthetic Active Radiation", 
+                    "Ph", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Blue Green Algae"
+                ], 
+                "Description": "Mooring fwri.mtb.wq data from the fwri (fwri) located Middle Tampa Bay"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.7580032348633, 
+                    28.1560001373291
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.TAS.NGWLMS", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Salinity", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.TAS.NGWLMS data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.746, 
+                    24.917
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.pkyf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.pkyf1.met data from the enp (enp) located Peterson Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.186, 
+                    25.7
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.cnbf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.cnbf1.met data from the enp (enp) located Cannon Bay, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.579374, 
+                    27.333752
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fwri.npd.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Ph", 
+                    "Oxygen Concentration", 
+                    "Chl Concentration", 
+                    "Blue Green Algae"
+                ], 
+                "Description": "Mooring fwri.npd.wq data from the fwri (fwri) located New Pass Dock"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.779878, 
+                    33.76152
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "lbhmc.apachepier.pier", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Oxygen Concentration", 
+                    "Depth", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring lbhmc.apachepier.pier data from the lbhmc (lbhmc) located Apache Pier, Myrtle Beach, SC"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.329556, 
+                    29.994722
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.tolomatoriver.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.tolomatoriver. data from the fldep (fldep) located Tolomato River station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.88097, 
+                    26.64934
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "sccf.fortmyers.wq", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Water Conductivity", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Oxygen Saturation", 
+                    "Oxygen Concentration", 
+                    "Nitrate", 
+                    "Depth", 
+                    "Chl Concentration", 
+                    "Cdom"
+                ], 
+                "Description": "Mooring sccf.fortmyers.wq data from the sccf (sccf) located Fort Myers station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.728, 
+                    25.077
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.wrbf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.wrbf1.met data from the enp (enp) located Whipray Basin, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.647455, 
+                    27.932003
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fwri.otb.wq", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Turbidity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Photosynthetic Active Radiation", 
+                    "Ph", 
+                    "Oxygen Concentration", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current Speed", 
+                    "Chl Concentration", 
+                    "Blue Green Algae", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fwri.otb.wq data from the fwri (fwri) located Old Tampa Bay"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.797, 
+                    25.17
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.gbtf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.gbtf1.met data from the enp (enp) located Garfield Bight, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -83.398003, 
+                    28.306
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C14.IMET", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C14.IMET data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.894, 
+                    25.284
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.lrif1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.lrif1.met data from the enp (enp) located Lane River, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -75.5911, 
+                    36.2576
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usace.duck.waverider", 
+                "Observed properties": [
+                    "Water Temperature", 
+                    "Dominant Wave Period"
+                ], 
+                "Description": "Mooring usace.duck.waverider data from the usace (usace) located Duck Pier"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.162778, 
+                    27.165278
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.stlucieinlet.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.stlucieinlet. data from the fldep (fldep) located St Lucie Inlet station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.49, 
+                    25.18
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.dkkf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.dkkf1.met data from the enp (enp) located Duck Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.477, 
+                    33.8428
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "cormp.SUN2WAVE.buoy", 
+                "Observed properties": [
+                    "Wave From Direction", 
+                    "Water Temperature", 
+                    "Significant Wave Height", 
+                    "Dominant Wave Period", 
+                    "Current To Direction", 
+                    "Current Speed"
+                ], 
+                "Description": "Mooring cormp.SUN2WAVE.buoy data from the cormp (cormp) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.99, 
+                    25.476
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.bdvf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.bdvf1.met data from the enp (enp) located Broad River, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.044, 
+                    25.619
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.wiwf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.wiwf1.met data from the enp (enp) located Willy Willy, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -82.928001, 
+                    27.167999
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C10.IMET", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Significant Wave Height", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Dominant Wave Period", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C10.IMET data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -81.633806, 
+                    29.982111
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.redbaypoint.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.redbaypoint. data from the fldep (fldep) located Red Bay Point station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.904, 
+                    25.05
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.jkyf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.jkyf1.met data from the enp (enp) located Johnson Key, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -83.4, 
+                    28.31
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "usf.C14.ADCP", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Swell Height", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring usf.C14.ADCP data from the usf (usf) located"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.682, 
+                    25.024
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "enp.bobf1.met", 
+                "Observed properties": [
+                    "Water Temperature"
+                ], 
+                "Description": "Mooring enp.bobf1.met data from the enp (enp) located Bob Allen, FL"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -80.30085, 
+                    27.467547
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "fldep.binneydock.", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Water Level", 
+                    "Water Conductivity", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Precipitation", 
+                    "Ph", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring fldep.binneydock. data from the fldep (fldep) located Binney Dock station"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -78.15, 
+                    33.9
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "cormp.OCP1.buoy", 
+                "Observed properties": [
+                    "Wind Speed", 
+                    "Wind Gust", 
+                    "Wind From Direction", 
+                    "Water Temperature", 
+                    "Swell Height", 
+                    "Significant Wave Height", 
+                    "Salinity", 
+                    "Relative Humidity", 
+                    "Northward Current", 
+                    "Eastward Current", 
+                    "Dominant Wave Period", 
+                    "Current To Direction", 
+                    "Current Speed", 
+                    "Air Temperature", 
+                    "Air Pressure"
+                ], 
+                "Description": "Mooring cormp.OCP1.buoy data from the cormp (cormp) located CORMP OCP1, Ocean Crest Pier,NC"
+            }
+        }
+    ]
+}
