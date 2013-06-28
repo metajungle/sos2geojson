@@ -13,3 +13,4 @@ ioos:
   - http://opendap.co-ops.nos.noaa.gov/ioos-dif-sos/SOS
   - http://www.neracoos.org/cgi-bin/sos/V1.0/oostethys_sos.cgi
   - http://neptune.baruch.sc.edu/cgi-bin/ioos_sos.cgi 
+  - http://sccoos-obs0.ucsd.edu/sos/server.php
