@@ -1,5 +1,7 @@
 # SOS2GeoJSON
 
+<img src="https://travis-ci.org/metajungle/sos2geojson.png" title="Travis" />
+
 Takes a list of [Sensor Observation Services (SOSs)][ref-ogc-sos] specified in `services.yaml` and puts out a GeoJSON file showing the location of the sensor offerings for each service (the output is by default written to the `layers` folder). 
 
 ## Setup
