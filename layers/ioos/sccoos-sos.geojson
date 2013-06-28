@@ -1,0 +1,143 @@
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -120.7805, 
+                    34.454
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-071", 
+                "Observed properties": [
+                    "Watertemperature", 
+                    "Waves"
+                ], 
+                "Description": "Approximately 15.5nm W of Point Conception"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -117.9783, 
+                    33.6317
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-072", 
+                "Observed properties": [
+                    "Waves"
+                ], 
+                "Description": "Approximately 1 mile west of lifeguard headquarters at Huntington Beach, CA"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -118.499, 
+                    34.008
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-santamonicapier", 
+                "Observed properties": [
+                    "Salinity"
+                ], 
+                "Description": "Santa Monica Pier"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -117.9, 
+                    33.599
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-newportbeach", 
+                "Observed properties": [
+                    "Salinity"
+                ], 
+                "Description": "Newport Beach"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -117.257, 
+                    33.867
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-scrippspier", 
+                "Observed properties": [
+                    "Salinity"
+                ], 
+                "Description": "Scripps Pier"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -123.4698, 
+                    37.9456
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-029", 
+                "Observed properties": [
+                    "Watertemperature", 
+                    "Waves"
+                ], 
+                "Description": "Approximately 21.5nm W of Point Reyes"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -122.0033, 
+                    36.9533
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-006", 
+                "Observed properties": [
+                    "Waves"
+                ], 
+                "Description": "500 ft. SW of West Jetty, Santa Cruz Harbor"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -119.685, 
+                    34.408
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "Offering Id": "station-stearnswharf", 
+                "Observed properties": [
+                    "Salinity"
+                ], 
+                "Description": "Stearns Wharf"
+            }
+        }
+    ]
+}
