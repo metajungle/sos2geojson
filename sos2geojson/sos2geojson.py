@@ -49,7 +49,7 @@ def generate_geojson(offerings):
   }
   return layer
 
-def process_sos_endpoint(endpoint, output_dir, idx):
+def process_sos_endpoint(endpoint, output_dir, idx, filename=None):
   """processes a single SOS endpoint"""
   response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
   xml = response.read()
@@ -57,11 +57,14 @@ def process_sos_endpoint(endpoint, output_dir, idx):
   # generate GeoJSON layer structure 
   layer = generate_geojson(sos.contents)
   # create a GeoJSON layer filename
-  try:
-    filename = "%s.geojson" % util.name_for_filename(sos.identification.title)
-  except AttributeError:
-    # provide a name if we cannot find one 
-    filename = "sos-layer%s.geojson" % idx
+  if filename == None:
+    try:
+      filename = "%s.geojson" % util.name_for_filename(sos.identification.title)
+    except AttributeError:
+      # provide a name if we cannot find one 
+      filename = "sos-layer%s.geojson" % idx
+  else:
+    filename = "%s.geojson" % filename
   # dump to JSON
   with open(os.path.join(output_dir, filename), "w") as f:
       f.write(json.dumps(layer, indent=4))
@@ -82,8 +85,15 @@ def process_services():
         output_dir = os.path.join(ROOT_OUTPUT_DIR, folder)
         if not os.path.exists(output_dir):
           os.makedirs(output_dir)
-        for endpoint in services[folder]:
-          process_sos_endpoint(endpoint, output_dir, idx)
+        for endpoint_info in services[folder]:
+          filename = None
+          # check if the service endpoint comes with a name to use
+          if isinstance(endpoint_info, dict):
+            endpoint = endpoint_info.keys()[0]
+            filename = endpoint_info[endpoint]
+          else:
+            endpoint = endpoint_info
+          process_sos_endpoint(endpoint, output_dir, idx, filename)
       except OSError:
         sys.stderr.write("Could not create output directory %s\n" % output_dir)
 
