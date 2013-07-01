@@ -25,7 +25,7 @@ ROOT_OUTPUT_DIR = 'layers'
 # "INTERNAL" 
 #
 
-def collect_features(offerings, p_fn):
+def collect_features(offerings, p_fn, extra):
   """
   Collects features from a sensor offering list
   """
@@ -38,7 +38,7 @@ def collect_features(offerings, p_fn):
       features.append({
         "type" : "Feature", 
         "geometry" : bbox, 
-        "properties": p_fn(offering)
+        "properties": dict(p_fn(offering), **extra)
       })
     else:
       print "Skipping %s" % offering.id
@@ -70,7 +70,7 @@ def offering_geojson_properties_alt(offering):
     p["offering-end"] = str(offering.end_position)
   return p
 
-def generate_geojson(offerings, geojson_prop_fn=offering_geojson_properties_default):
+def generate_geojson(offerings, geojson_prop_fn=offering_geojson_properties_default, extra={}):
   """
   Generates GeoJSON from a sensor offering list, 
   using the given function to construct the GeoJSON
@@ -78,11 +78,11 @@ def generate_geojson(offerings, geojson_prop_fn=offering_geojson_properties_defa
   """
   layer = {
       "type": "FeatureCollection",
-      "features": collect_features(offerings, geojson_prop_fn) 
+      "features": collect_features(offerings, geojson_prop_fn, extra) 
   }
   return layer
 
-def process_sos_endpoint(endpoint, output_dir, idx, filename=None):
+def process_sos_endpoint(endpoint, output_dir, idx, filename=None, pretty=False):
   """
   Processes a single SOS endpoint
   """
@@ -102,7 +102,10 @@ def process_sos_endpoint(endpoint, output_dir, idx, filename=None):
     filename = "%s.geojson" % filename
   # dump to JSON
   with open(os.path.join(output_dir, filename), "w") as f:
+    if pretty:
       f.write(json.dumps(layer, indent=4))
+    else:
+      f.write(json.dumps(layer, separators=(',',':')))
 
 def process_services():
   """
@@ -139,7 +142,7 @@ def process_services():
 # API
 #
 
-def sos2geojson(endpoint, file, feature_properties=offering_geojson_properties_default):
+def sos2geojson(endpoint, file, feature_properties=offering_geojson_properties_default, extra={}, pretty=False):
   """
   Converts an SOS endpoint to a GeoJSON layer and writes it to the given file
   Parameters:
@@ -147,18 +150,24 @@ def sos2geojson(endpoint, file, feature_properties=offering_geojson_properties_d
     file - file to write GeoJSON to
     feature_properties - function that takes an Offering object and returns 
                          a dictionary used for GeoJSON features properties 
+    extra - dictionary to extend the GeoJSON feature properties dictionary 
   """
   response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
   xml = response.read()
   sos = SensorObservationService(None, xml=xml)
   # generate GeoJSON layer structure 
-  layer = generate_geojson(sos.contents, feature_properties)
+  layer = generate_geojson(sos.contents, feature_properties, extra)
   # dump to JSON
   with open(file, "w") as f:
+    if pretty:
       f.write(json.dumps(layer, indent=4))
+    else:
+      f.write(json.dumps(layer, separators=(',',':')))
 
 def main():
-  process_services()
+  # process_services()
+  sos2geojson("http://sdf.ndbc.noaa.gov/sos/server.php", "/Users/b0kaj/Downloads/ndbc.geojson", 
+    offering_geojson_properties_alt, { "service-endpoint": "http://sdf.ndbc.noaa.gov/sos/server.php" })
   
 if __name__ == "__main__":
   main()
