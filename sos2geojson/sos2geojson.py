@@ -20,8 +20,15 @@ SERVICES_FILE = 'services.yaml'
 # the root output folder for all generated GeoJSON layers 
 ROOT_OUTPUT_DIR = 'layers'
 
-def collect_features(offerings):
-  """collects features from a sensor offering list"""
+
+#
+# "INTERNAL" 
+#
+
+def collect_features(offerings, p_fn):
+  """
+  Collects features from a sensor offering list
+  """
   features = []
   for key in offerings.keys():
     offering = offerings[key]
@@ -31,26 +38,54 @@ def collect_features(offerings):
       features.append({
         "type" : "Feature", 
         "geometry" : bbox, 
-        "properties": {
-          "Offering Id" : offering.id, 
-          "Description" : offering.description, 
-          "Observed properties" : [util.uri_pretty(p) for p in offering.observed_properties] 
-        }
+        "properties": p_fn(offering)
       })
     else:
       print "Skipping %s" % offering.id
   return features
+  
+def offering_geojson_properties_default(offering):
+  """
+  Default function for constructing the 'properties' 
+  of a GeoJSON feature from a sensor offering
+  """
+  return { "Offering Id" : offering.id, 
+           "Description" : offering.description, 
+           "Observed properties" : 
+           [util.uri_pretty(p) for p in offering.observed_properties] }
 
-def generate_geojson(offerings):
-  """generates GeoJSON from a sensor offering list"""
+def offering_geojson_properties_alt(offering):
+  """
+  Generates alternative GeoJSON feature 'properties' 
+  object from a sensor offering
+  """
+  p = { "offering-id" : offering.id, 
+           "offering-name" : offering.name, 
+           "offering-description" : offering.description, 
+           "offering-properties" : offering.observed_properties, 
+           "offering-formats" : offering.response_formats }
+  if offering.begin_position:
+    p["offering-start"] = str(offering.begin_position)
+  if offering.end_position:
+    p["offering-end"] = str(offering.end_position)
+  return p
+
+def generate_geojson(offerings, geojson_prop_fn=offering_geojson_properties_default):
+  """
+  Generates GeoJSON from a sensor offering list, 
+  using the given function to construct the GeoJSON
+  feature properties object 
+  """
   layer = {
       "type": "FeatureCollection",
-      "features": collect_features(offerings) 
+      "features": collect_features(offerings, geojson_prop_fn) 
   }
   return layer
 
 def process_sos_endpoint(endpoint, output_dir, idx, filename=None):
-  """processes a single SOS endpoint"""
+  """
+  Processes a single SOS endpoint
+  """
   response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
   xml = response.read()
   sos = SensorObservationService(None, xml=xml)
@@ -70,7 +105,9 @@ def process_sos_endpoint(endpoint, output_dir, idx, filename=None):
       f.write(json.dumps(layer, indent=4))
 
 def process_services():
-  """processes all SOS services given in configuration file"""
+  """
+  Processes all SOS services given in configuration file
+  """
   if not os.path.exists(ROOT_OUTPUT_DIR): 
     try:
       os.makedirs(ROOT_OUTPUT_DIR) 
@@ -97,6 +134,28 @@ def process_services():
       except OSError:
         sys.stderr.write("Could not create output directory %s\n" % output_dir)
 
+
+#
+# API
+#
+
+def sos2geojson(endpoint, file, feature_properties=offering_geojson_properties_default):
+  """
+  Converts an SOS endpoint to a GeoJSON layer and writes it to the given file
+  Parameters:
+    endpoint - SOS service endpoint
+    file - file to write GeoJSON to
+    feature_properties - function that takes an Offering object and returns 
+                         a dictionary used for GeoJSON features properties 
+  """
+  response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
+  xml = response.read()
+  sos = SensorObservationService(None, xml=xml)
+  # generate GeoJSON layer structure 
+  layer = generate_geojson(sos.contents, feature_properties)
+  # dump to JSON
+  with open(file, "w") as f:
+      f.write(json.dumps(layer, indent=4))
 
 def main():
   process_services()
