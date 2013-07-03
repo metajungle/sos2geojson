@@ -41,17 +41,17 @@ For more detailed options, take a look at the code.
 
 ## Command line 
 
-You can also use the included `run.py` script to generate GeoJSON files from the command line. The input is in this case specified in the `services.yaml` configuration file. 
+You can also use the included `bin/run.py` script to generate GeoJSON files from the command line. The input is in this case specified in the `services.yaml` configuration file. 
 
 Make sure that `sos2geojson` is on your path and then run the program:
 
-    > python run.py
+    > python bin/run.py
     
-The output will end up in a folder called `layers` by default. This can be modified by changing the `run.py` script. 
+The output will end up in a folder called `layers` by default. This can be modified by changing the `bin/run.py` script. 
 
-If you want to create a single GeoJSON layer for *all* services listed in the `services.yaml` file, run the `all.py` script:
+If you want to create a single GeoJSON layer for *all* services listed in the `services.yaml` file, run the `bin/all.py` script:
 
-    > python all.py
+    > python bin/all.py
     
 The result will by default be written to `layers/all.geojson`. 
 
