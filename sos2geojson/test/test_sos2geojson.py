@@ -23,8 +23,8 @@ class TestSOS2GeoJSON(unittest.TestCase):
   def test_count_geojson_features(self):
     """count generated GeoJSON features"""
     # generate GeoJSON layer structure 
-    layer = sos2geojson.generate_geojson(self.sos.contents)
-    self.assertEqual(len(layer['features']), 805)
+    features = sos2geojson._features_from_offerings(self.sos.contents)
+    self.assertEqual(len(features), 805)
 
 if __name__ == "__main__":
   unittest.main()

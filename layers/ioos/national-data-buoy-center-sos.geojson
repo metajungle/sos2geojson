@@ -1481,6 +1481,7 @@
                 "Offering Id": "station-45024", 
                 "Observed properties": [
                     "Air Temperature", 
+                    "Sea Water Temperature", 
                     "Waves", 
                     "Winds"
                 ], 

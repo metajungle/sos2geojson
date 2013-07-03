@@ -1,176 +1,346 @@
 #!/usr/bin/env python
 import os
 import sys
+import types
 
 from owslib.sos import SensorObservationService
-#from owslib.fes import FilterCapabilities
-#from owslib.ows import OperationsMetadata
-#from owslib.crs import Crs
-#from datetime import datetime
 
 import urllib2
-import yaml 
-import json 
+import yaml
+import json
 
-import util
-
-# where services as defined
-SERVICES_FILE = 'services.yaml'
-
-# the root output folder for all generated GeoJSON layers 
-ROOT_OUTPUT_DIR = 'layers'
-
+from util import uri_pretty, bbox2geometry
+from util import add_query_params_v1, name_for_filename
 
 #
-# "INTERNAL" 
+# INTERNAL
 #
 
-def collect_features(offerings, p_fn, extra):
-  """
-  Collects features from a sensor offering list
-  """
-  features = []
-  for key in offerings.keys():
-    offering = offerings[key]
-    # for now, only consider offerings with 'proper' bbox
-    bbox = util.bbox2geometry(offering.bbox)
-    if bbox != None:
-      features.append({
-        "type" : "Feature", 
-        "geometry" : bbox, 
-        "properties": dict(p_fn(offering), **extra)
-      })
-    else:
-      print "Skipping %s" % offering.id
-  return features
-  
-def offering_geojson_properties_default(offering):
-  """
-  Default function for constructing the 'properties' 
-  of a GeoJSON feature from a sensor offering
-  """
-  return { "Offering Id" : offering.id, 
-           "Description" : offering.description, 
-           "Observed properties" : 
-           [util.uri_pretty(p) for p in offering.observed_properties] }
+def _properties_default(offering, **kwargs):
+    """
+    Default function for constructing the 'properties'
+    of a GeoJSON feature from a sensor offering
+    """
+    return { "Offering Id" : offering.id,
+             "Description" : offering.description,
+             "Observed properties" :
+             [uri_pretty(p) for p in offering.observed_properties] }
 
-def offering_geojson_properties_alt(offering):
-  """
-  Generates alternative GeoJSON feature 'properties' 
-  object from a sensor offering
-  """
-  p = { "offering-id" : offering.id, 
-           "offering-name" : offering.name, 
-           "offering-description" : offering.description, 
-           "offering-properties" : offering.observed_properties, 
-           "offering-formats" : offering.response_formats }
-  if offering.begin_position:
-    p["offering-start"] = str(offering.begin_position)
-  if offering.end_position:
-    p["offering-end"] = str(offering.end_position)
-  return p
+def _properties_alt(offering, **kwargs):
+    """
+    Generates alternative GeoJSON feature 'properties'
+    object from a sensor offering
+    """
+    prop = { "offering-id" : offering.id,
+             "offering-name" : offering.name,
+             "offering-description" : offering.description,
+             "offering-properties" : offering.observed_properties,
+             "offering-formats" : offering.response_formats }
+    if offering.begin_position:
+        prop["offering-start"] = str(offering.begin_position)
+    if offering.end_position:
+        prop["offering-end"] = str(offering.end_position)
+    # make use of all the arguments 
+    for key, value in kwargs.iteritems():
+        prop[key] = value
+    return prop
 
-def generate_geojson(offerings, geojson_prop_fn=offering_geojson_properties_default, extra={}):
-  """
-  Generates GeoJSON from a sensor offering list, 
-  using the given function to construct the GeoJSON
-  feature properties object 
-  """
-  layer = {
-      "type": "FeatureCollection",
-      "features": collect_features(offerings, geojson_prop_fn, extra) 
-  }
-  return layer
+def _features_from_offerings(offerings, p_fn=_properties_default, extra=None):
+    """
+    Collects features from a sensor offering list
+    Parameters:
+        offerings - array of sensor Offerings
+        p_fn - function that takes an Offering object and returns
+               a dictionary used for GeoJSON features properties
+        extra - dictionary to extend the GeoJSON feature properties dictionary
+    """
+    if extra is None:
+        extra = {}
+    features = []
+    for key in offerings.keys():
+        offering = offerings[key]
+        # for now, only consider offerings with 'proper' bbox
+        bbox = bbox2geometry(offering.bbox)
+        if bbox != None:
+            features.append({
+                "type" : "Feature",
+                "geometry" : bbox,
+                "properties": p_fn(offering, **extra)
+            })
+        else:
+            print("Skipping %s - not a point" % offering.id)
+    return features
 
-def process_sos_endpoint(endpoint, output_dir, idx, filename=None, pretty=False):
-  """
-  Processes a single SOS endpoint
-  """
-  response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
-  xml = response.read()
-  sos = SensorObservationService(None, xml=xml)
-  # generate GeoJSON layer structure 
-  layer = generate_geojson(sos.contents)
-  # create a GeoJSON layer filename
-  if filename == None:
+def _features_from_endpoint(endpoint, p_fn=_properties_default, extra=None):
+    """
+    Generates a GeoJSON feature collection from an SOS endpoint
+    Parameters:
+        endpoint - SOS service endpoint
+        p_fn - function that takes an Offering object and returns
+               a dictionary used for GeoJSON features properties
+        extra - dictionary to extend the GeoJSON feature properties dictionary
+    """
+    if extra is None:
+        extra = {}
+    # make endpoint available
+    extra["service-endpoint"] = endpoint 
+    response = urllib2.urlopen(add_query_params_v1(endpoint), timeout=60)
+    xml = response.read()
+    sos = SensorObservationService(None, xml=xml)
     try:
-      filename = "%s.geojson" % util.name_for_filename(sos.identification.title)
+        title = sos.identification.title
     except AttributeError:
-      # provide a name if we cannot find one 
-      filename = "sos-layer%s.geojson" % idx
-  else:
-    filename = "%s.geojson" % filename
-  # dump to JSON
-  with open(os.path.join(output_dir, filename), "w") as f:
-    if pretty:
-      f.write(json.dumps(layer, indent=4))
-    else:
-      f.write(json.dumps(layer, separators=(',',':')))
+        title = None
+    return title, _features_from_offerings(sos.contents, p_fn, extra)
 
-def process_services():
-  """
-  Processes all SOS services given in configuration file
-  """
-  if not os.path.exists(ROOT_OUTPUT_DIR): 
+def _feature_collection_from_features(features):
+    """
+    Returns a feature collection from the given set of features
+    """
+    layer = {
+        "type": "FeatureCollection",
+        "features": features
+    }
+    return layer
+
+def _process_sos_endpoint(endpoint, output_dir, idx=0, filename=None):
+    """
+    Processes a single SOS endpoint and writes to file 
+    """
+    title, features = _features_from_endpoint(endpoint)
+    collection = _feature_collection_from_features(features)
+    # create a GeoJSON layer filename
+    if filename is None:
+        if title is None:
+            filename = "sos-layer%s.geojson" % idx
+        else:
+            filename = "%s.geojson" % name_for_filename(title)
+    else:
+        if filename.rfind(".geojson") == -1:
+            filename = "%s.geojson" % filename
+    # dump to JSON
+    with open(os.path.join(output_dir, filename), "w") as f:
+        # pretty print by default 
+        f.write(json.dumps(collection, indent=4))
+
+def _create_layer_output_dir(rootdir):
+    """
+    Creates the output directory for the GeoJSON layers
+    """
+    if not os.path.exists(rootdir):
+        try:
+            os.makedirs(rootdir)
+        except OSError:
+            sys.stderr.write("Could not create root output " + 
+                             "directory, aborting\n")
+            return None
+    return True
+
+def _parse_yaml(yaml_filename):
+    """
+    Parses the YAML configuration file and returns a list of triples 
+    containing ("endpoint", "output_folder", "filename")
+    """
     try:
-      os.makedirs(ROOT_OUTPUT_DIR) 
-    except OSError:
-      sys.stderr.write("Could not create root output directory, aborting\n")
-      return 
-      
-  with open(SERVICES_FILE) as f:
-    services = yaml.load(f)
-    for (idx, folder) in enumerate(services.keys()):
-      try:
-        output_dir = os.path.join(ROOT_OUTPUT_DIR, folder)
-        if not os.path.exists(output_dir):
-          os.makedirs(output_dir)
-        for endpoint_info in services[folder]:
-          filename = None
-          # check if the service endpoint comes with a name to use
-          if isinstance(endpoint_info, dict):
-            endpoint = endpoint_info.keys()[0]
-            filename = endpoint_info[endpoint]
-          else:
-            endpoint = endpoint_info
-          process_sos_endpoint(endpoint, output_dir, idx, filename)
-      except OSError:
-        sys.stderr.write("Could not create output directory %s\n" % output_dir)
+        with open(yaml_filename) as file_yaml:
+            services = yaml.load(file_yaml)
+            endpoints = []
+            for (idx, folder) in enumerate(services.keys()):
+                for endpoint_info in services[folder]:
+                    filename = None
+                    # check if the service endpoint comes with a name to use
+                    if isinstance(endpoint_info, types.DictType):
+                        endpoint = endpoint_info.keys()[0]
+                        filename = endpoint_info[endpoint]
+                    else:
+                        endpoint = endpoint_info
+                    # collect endpoints 
+                    val = (endpoint, folder, filename)
+                    endpoints.append((endpoint, folder, filename))
+            return endpoints
+    except IOError:
+        sys.stderr.write("Could not find configuration file: %s\n" % 
+                         yaml_filename)
+    return None
 
+def _process_services_from_yaml(rootdir, yaml_filename):
+    """
+    Processes all SOS services given in configuration file
+    Parameters:
+        rootdir - root output directory 
+        yaml_filename - configuration file in YAML
+    """
+    endpoint_data = _parse_yaml(yaml_filename)
+    if endpoint_data is None:
+        return 
+        
+    if not _create_layer_output_dir(rootdir):
+        return
 
-#
-# API
-#
+    for (idx, _endpoint) in enumerate(endpoint_data): 
+        endpoint, folder, filename = _endpoint
+        try:
+            output_dir = os.path.join(rootdir, folder)
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+            # process endpoint 
+            _process_sos_endpoint(endpoint, output_dir, 
+                                  idx, filename)
+        except OSError:
+            sys.stderr.write("Could not create output directory %s\n" % 
+                             output_dir)
 
-def sos2geojson(endpoint, file, feature_properties=offering_geojson_properties_default, extra={}, pretty=False):
-  """
-  Converts an SOS endpoint to a GeoJSON layer and writes it to the given file
-  Parameters:
-    endpoint - SOS service endpoint
-    file - file to write GeoJSON to
-    feature_properties - function that takes an Offering object and returns 
-                         a dictionary used for GeoJSON features properties 
-    extra - dictionary to extend the GeoJSON feature properties dictionary 
-  """
-  response = urllib2.urlopen(util.add_query_params_v1(endpoint), timeout=60)
-  xml = response.read()
-  sos = SensorObservationService(None, xml=xml)
-  # generate GeoJSON layer structure 
-  layer = generate_geojson(sos.contents, feature_properties, extra)
-  # dump to JSON
-  with open(file, "w") as f:
+# def _process_services_from_yaml(rootdir, yaml_filename):
+#     """
+#     Processes all SOS services given in configuration file
+#     Parameters:
+#         rootdir - root output directory 
+#         yaml_filename - configuration file in YAML
+#     """
+#     if not _create_layer_output_dir(rootdir):
+#         return
+# 
+#     try:
+#         with open(yaml_filename) as file_yaml:
+#             services = yaml.load(file_yaml)
+#             for (idx, folder) in enumerate(services.keys()):
+#                 try:
+#                     output_dir = os.path.join(rootdir, folder)
+#                     if not os.path.exists(output_dir):
+#                         os.makedirs(output_dir)
+#                     for endpoint_info in services[folder]:
+#                         filename = None
+#                         # check if the service endpoint comes with a name to use
+#                         if isinstance(endpoint_info, types.DictType):
+#                             endpoint = endpoint_info.keys()[0]
+#                             filename = endpoint_info[endpoint]
+#                         else:
+#                             endpoint = endpoint_info
+#                         # process endpoint 
+#                         _process_sos_endpoint(endpoint, output_dir, 
+#                                               idx, filename)
+#                 except OSError:
+#                     sys.stderr.write("Could not create output directory %s\n" % 
+#                                      output_dir)
+#     except IOError:
+#         sys.stderr.write("Could not find configuration file: %s\n" % 
+#                          yaml_filename)
+
+def _process_all_services_from_yaml(yaml_filename, p_fn=_properties_default, pretty=False):
+    """
+    Processes all SOS services given in configuration file
+    Parameters:
+        rootdir - root output directory 
+        yaml_filename - configuration file in YAML
+        p_fn - function that takes an Offering object and returns
+               a dictionary used for GeoJSON features properties
+        pretty - true if pretty print, false if minified
+    """
+    endpoint_data = _parse_yaml(yaml_filename)
+    if endpoint_data is None:
+        return 
+        
+    features = []
+    for (idx, _endpoint) in enumerate(endpoint_data): 
+        endpoint, _folder, _filename = _endpoint
+        # collect features from all endpoints 
+        _title, fs = _features_from_endpoint(endpoint, p_fn)
+        features.extend(fs)
+
+    # create feature collection for all features 
+    collection = _feature_collection_from_features(features)
     if pretty:
-      f.write(json.dumps(layer, indent=4))
-    else:
-      f.write(json.dumps(layer, separators=(',',':')))
+        return json.dumps(collection, indent=4)
+    return json.dumps(collection, separators=(',',':'))
 
-def main():
-  # process_services()
-  sos2geojson("http://sdf.ndbc.noaa.gov/sos/server.php", "/Users/b0kaj/Downloads/ndbc.geojson", 
-    offering_geojson_properties_alt, { "service-endpoint": "http://sdf.ndbc.noaa.gov/sos/server.php" })
-  
-if __name__ == "__main__":
-  main()
-  
-  
+# def _process_all_services_from_yaml2(rootdir, yaml_filename, p_fn=_properties_default, pretty=False):
+#     """
+#     Processes all SOS services given in configuration file
+#     Parameters:
+#         rootdir - root output directory 
+#         yaml_filename - configuration file in YAML
+#         p_fn - function that takes an Offering object and returns
+#                a dictionary used for GeoJSON features properties
+#         pretty - true if pretty print, false if minified
+#     """
+#     if not _create_layer_output_dir(rootdir):
+#         return
+# 
+#     try:
+#         with open(yaml_filename) as file_yaml:
+#             services = yaml.load(file_yaml)
+#             features = []
+#             for (idx, folder) in enumerate(services.keys()):
+#                 for endpoint_info in services[folder]:
+#                     # check if the service endpoint comes with a name to use
+#                     if isinstance(endpoint_info, types.DictType):
+#                         endpoint = endpoint_info.keys()[0]
+#                     else:
+#                         endpoint = endpoint_info
+#                     # collect features from all endpoints 
+#                     _title, fs = _features_from_endpoint(endpoint, p_fn)
+#                     features.extend(fs)
+#             # create feature collection for all features 
+#             collection = _feature_collection_from_features(features)
+#             if pretty:
+#                 return json.dumps(collection, indent=4)
+#             return json.dumps(collection, separators=(',',':'))
+#     except IOError:
+#         sys.stderr.write("Could not find configuration file: %s\n" % 
+#                          yaml_filename)
+
+
+#
+# PUBLIC
+#
+
+def process_from_yaml(rootdir, yaml_filename):
+    """
+    Processes all SOS services given in configuration file
+    Parameters:
+        rootdir - root output directory 
+        yaml_filename - configuration filename in YAML
+    """
+    _process_services_from_yaml(rootdir, yaml_filename)
+
+def process_all_from_yaml(rootdir, out_filename, yaml_filename):
+    """
+    Processes all services into a single GeoJSON file
+    """
+    if not _create_layer_output_dir(rootdir):
+        return
+    
+    geojson = _process_all_services_from_yaml(yaml_filename, p_fn=_properties_alt)
+    try:
+        with open(os.path.join(rootdir, out_filename), "w") as f:
+            # pretty print by default 
+            f.write(geojson)
+    except IOError:
+        sys.stderr.write("Could not write file: %s\n" % 
+                         out_filename)
+
+def sos2geojson(endpoints, p_fn=_properties_default, extra=None, pretty=False):
+    """
+    Generates a GeoJSON feature collection from an SOS endpoint
+    Parameters:
+        endpoints - list SOS service endpoints, or a single endpoint
+        p_fn - function that takes an Offering object and returns
+               a dictionary used for GeoJSON features properties
+        extra - dictionary to extend the GeoJSON feature properties dictionary
+        pretty - true if pretty print, false if minified
+    """
+    if extra is None:
+        extra = {}
+    features = []
+    if isinstance(endpoints, types.ListType):
+        for endpoint in endpoints:
+            _title, fs = _features_from_endpoint(endpoint, p_fn, extra)
+            features.extend(fs)
+    elif isinstance(endpoints, basestring):
+        _title, fs = _features_from_endpoint(endpoints, p_fn, extra)
+        features.extend(fs)
+    collection = _feature_collection_from_features(features)
+    if pretty:
+        return json.dumps(collection, indent=4)
+    return json.dumps(collection, separators=(',',':'))
   
