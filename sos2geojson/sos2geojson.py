@@ -190,41 +190,6 @@ def _process_services_from_yaml(rootdir, yaml_filename):
             sys.stderr.write("Could not create output directory %s\n" % 
                              output_dir)
 
-# def _process_services_from_yaml(rootdir, yaml_filename):
-#     """
-#     Processes all SOS services given in configuration file
-#     Parameters:
-#         rootdir - root output directory 
-#         yaml_filename - configuration file in YAML
-#     """
-#     if not _create_layer_output_dir(rootdir):
-#         return
-# 
-#     try:
-#         with open(yaml_filename) as file_yaml:
-#             services = yaml.load(file_yaml)
-#             for (idx, folder) in enumerate(services.keys()):
-#                 try:
-#                     output_dir = os.path.join(rootdir, folder)
-#                     if not os.path.exists(output_dir):
-#                         os.makedirs(output_dir)
-#                     for endpoint_info in services[folder]:
-#                         filename = None
-#                         # check if the service endpoint comes with a name to use
-#                         if isinstance(endpoint_info, types.DictType):
-#                             endpoint = endpoint_info.keys()[0]
-#                             filename = endpoint_info[endpoint]
-#                         else:
-#                             endpoint = endpoint_info
-#                         # process endpoint 
-#                         _process_sos_endpoint(endpoint, output_dir, 
-#                                               idx, filename)
-#                 except OSError:
-#                     sys.stderr.write("Could not create output directory %s\n" % 
-#                                      output_dir)
-#     except IOError:
-#         sys.stderr.write("Could not find configuration file: %s\n" % 
-#                          yaml_filename)
 
 def _process_all_services_from_yaml(yaml_filename, p_fn=_properties_default, pretty=False):
     """
@@ -252,42 +217,6 @@ def _process_all_services_from_yaml(yaml_filename, p_fn=_properties_default, pre
     if pretty:
         return json.dumps(collection, indent=4)
     return json.dumps(collection, separators=(',',':'))
-
-# def _process_all_services_from_yaml2(rootdir, yaml_filename, p_fn=_properties_default, pretty=False):
-#     """
-#     Processes all SOS services given in configuration file
-#     Parameters:
-#         rootdir - root output directory 
-#         yaml_filename - configuration file in YAML
-#         p_fn - function that takes an Offering object and returns
-#                a dictionary used for GeoJSON features properties
-#         pretty - true if pretty print, false if minified
-#     """
-#     if not _create_layer_output_dir(rootdir):
-#         return
-# 
-#     try:
-#         with open(yaml_filename) as file_yaml:
-#             services = yaml.load(file_yaml)
-#             features = []
-#             for (idx, folder) in enumerate(services.keys()):
-#                 for endpoint_info in services[folder]:
-#                     # check if the service endpoint comes with a name to use
-#                     if isinstance(endpoint_info, types.DictType):
-#                         endpoint = endpoint_info.keys()[0]
-#                     else:
-#                         endpoint = endpoint_info
-#                     # collect features from all endpoints 
-#                     _title, fs = _features_from_endpoint(endpoint, p_fn)
-#                     features.extend(fs)
-#             # create feature collection for all features 
-#             collection = _feature_collection_from_features(features)
-#             if pretty:
-#                 return json.dumps(collection, indent=4)
-#             return json.dumps(collection, separators=(',',':'))
-#     except IOError:
-#         sys.stderr.write("Could not find configuration file: %s\n" % 
-#                          yaml_filename)
 
 
 #
