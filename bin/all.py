@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from sos2geojson.sos2geojson import sos2geojson 
 from sos2geojson.sos2geojson import process_all_from_yaml 
 
