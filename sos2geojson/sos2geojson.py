@@ -89,6 +89,8 @@ def _features_from_endpoint(endpoint, p_fn=_properties_default, extra=None):
     sos = SensorObservationService(None, xml=xml)
     try:
         title = sos.identification.title
+        # make title available
+        extra["service-title"] = title
     except AttributeError:
         title = None
     return title, _features_from_offerings(sos.contents, p_fn, extra)
